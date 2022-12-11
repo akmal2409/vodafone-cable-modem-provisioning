@@ -1,6 +1,6 @@
 server:
   port: 8081
+spring:
+  profiles:
+    active: "dev"
 
-kafka:
-  bootstrap-server: "http://localhost:9092"
-  modem-provisioning-topic: 'modem.provisioning.topic'

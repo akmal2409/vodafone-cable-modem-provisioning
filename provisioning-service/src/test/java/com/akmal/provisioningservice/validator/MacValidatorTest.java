@@ -1,9 +1,8 @@
 package com.akmal.provisioningservice.validator;
 
 
-import static org.assertj.core.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
-import com.akmal.provisioningservice.validator.MacValidator;
 import java.util.function.Predicate;
 import org.junit.jupiter.api.Test;
 

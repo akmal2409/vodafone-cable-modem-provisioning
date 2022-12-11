@@ -12,6 +12,7 @@ import java.util.concurrent.TimeoutException;
 import java.util.function.Predicate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.kafka.core.KafkaTemplate;
@@ -25,6 +26,9 @@ public class ProvisioningService {
 
   private final KafkaTemplate<String, ModemProvisioningEvent> kafkaTemplate;
   private final KafkaConfigurationProperties kafkaProps;
+
+
+  @Autowired
   public ProvisioningService(@Qualifier("macNormalizer") Converter<String, String> macNormalizer,
       @Qualifier("macValidator") Predicate<String> macValidator,
       KafkaTemplate<String, ModemProvisioningEvent> kafkaTemplate,
