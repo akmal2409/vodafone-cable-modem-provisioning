@@ -1,0 +1,6 @@
+server:
+  port: 8081
+
+kafka:
+  bootstrap-server: "http://localhost:9092"
+  modem-provisioning-topic: 'modem.provisioning.topic'
