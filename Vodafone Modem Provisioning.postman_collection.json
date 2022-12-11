@@ -1,0 +1,40 @@
+{
+	"info": {
+		"_postman_id": "a09a4149-28b1-4682-903b-ee9dc9e4e704",
+		"name": "Vodafone Modem Provisioning",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12279027"
+	},
+	"item": [
+		{
+			"name": "Provision Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"macAddress\": \"0123.4567.89AB\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/modems",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"modems"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
