@@ -14,6 +14,8 @@ public class MacValidator implements Predicate<String> {
   private static final Pattern MAC_48_64_PATTERN = Pattern.compile("^(?!.*[_G-Z])(?:(?:\\w\\w([:-]?)(?:(?:\\w\\w\\1){6}|(?:\\w\\w\\1){4})\\w\\w$)|^(?:\\w{4}\\.){2,3}\\w{4})$");
   @Override
   public boolean test(String s) {
+    if (s == null) return false;
+
     return MAC_48_64_PATTERN.matcher(s).matches();
   }
 }
